@@ -1,0 +1,4 @@
+ls -lart
+uname -a
+pwd
+ls -lart
