@@ -2,3 +2,5 @@ ls -lart
 uname -a
 pwd
 ls -lart
+##sample code edit to test
+ps -ef|grep monogdb
