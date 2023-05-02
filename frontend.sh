@@ -5,7 +5,7 @@ systemctl enable nginx
 systemctl start nginx
 echo started nginx
 sleep 10
-sudo -i
+tail -f /var/log/nginx/error.log
 cd /home/centos/devops
 ##--> Remove the default content that web server is serving.
 rm -rf /usr/share/nginx/html/*
