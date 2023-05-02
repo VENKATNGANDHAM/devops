@@ -1,7 +1,10 @@
 ## -->>>Install Nginx
 echo Installing nginx
 yum install nginx -y
-
+systemctl enable nginx
+systemctl start nginx
+echo started nginx
+sleep 10
 ##--> Remove the default content that web server is serving.
 rm -rf /usr/share/nginx/html/*
 
