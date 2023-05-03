@@ -25,7 +25,7 @@ systemctl restart user
 ##We need to load the schema. To load schema we need to install mongodb client.
   #
   #To have it installed we can setup MongoDB repo and install mongodb-client
-  cp mongodb.repo /etc/yum.repos.d/mongo.repo
+  cp mongodb.repos /etc/yum.repos.d/mongo.repo
   yum install mongodb-org-shell -y
  echo Load Schema
 
