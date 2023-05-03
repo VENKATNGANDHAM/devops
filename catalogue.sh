@@ -9,11 +9,11 @@ echo Download the application code to created app directory.
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
 cd /app
 unzip /tmp/catalogue.zip
-echo Lets download the dependencies.
+echo Lets download the dependencies...
 cd /app
 npm install
 echo Setup SystemD Catalogue Service
-cp catalogue.service /etc/systemd/system/catalogue.service
+cp catalogue.config /etc/systemd/system/catalogue.service
 echo Load service
 systemctl daemon-reload
 echo Start the service.
