@@ -13,4 +13,5 @@ echo creating nginx proxy configuration file...
 ##--->Start & Enable Nginx service
 systemctl enable nginx
 systemctl restart nginx
-echo restarted nginx services
+echo restarted nginx services......
+
