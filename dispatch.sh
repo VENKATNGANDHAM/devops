@@ -1,20 +1,20 @@
-sudo -i
-#Install GoLang
+echo #Install GoLang
 yum install golang -y
+echo ##Setup SystemD Payment Service
+cp  dispatch.conf /etc/systemd/system/dispatch.service
 useradd roboshop
 mkdir /app
-##Download the application code to created app directory.
+echo ##Download the application code to created app directory.
 curl -L -o /tmp/dispatch.zip https://roboshop-artifacts.s3.amazonaws.com/dispatch.zip
 cd /app
 unzip /tmp/dispatch.zip
-##Lets download the dependencies & build the software.
+echo ##Lets download the dependencies & build the software.
 cd /app
 go mod init dispatch
 go get
 go build
-##Setup SystemD Payment Service
-cp  paymentservice /etc/systemd/system/dispatch.service
+
 systemctl daemon-reload
-##Start the service.
+echo  ##Start the service.
 systemctl enable dispatch
 systemctl restart dispatch
