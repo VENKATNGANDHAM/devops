@@ -1,10 +1,11 @@
 echo Setup NodeJS repos. Vendor is providing a script to setup the repos.
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+cp userservice.repo /etc/systemd/system/user.service
+cp mongodb.config /etc/yum.repos.d/mongo.repo
 echoInstall NodeJS
 yum install nodejs -y
 echo Setup SystemD User Service
-cp userservice.repo /etc/systemd/system/user.service
-cp mongodb.repos /etc/yum.repos.d/mongo.repo
+
 echo Add application User
 useradd roboshop
 echo Lets setup an app directory.
@@ -26,8 +27,8 @@ systemctl restart user
 ##We need to load the schema. To load schema we need to install mongodb client.
   #
   #To have it installed we can setup MongoDB repo and install mongodb-client
-  cp mongodb.repos /etc/yum.repos.d/mongo.repo
+
   yum install mongodb-org-shell -y
  echo Load Schema
 
-  mongo --mongodb-dev.ngandham.online </app/schema/user.js
+  mongo --host mongodb-dev.ngandham.online </app/schema/user.js
