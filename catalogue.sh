@@ -13,7 +13,7 @@ echo Lets download the dependencies.
 cd /app
 npm install
 echo Setup SystemD Catalogue Service
-cp catalogue.service /etc/systemd/system/catalogue.service
+cp catalogue.conf /etc/systemd/system/catalogue.service
 echo Load service
 systemctl daemon-reload
 echo Start the service.
