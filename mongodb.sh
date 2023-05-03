@@ -1,4 +1,3 @@
-sudo -i
 ##->create mongodb repor
 cp mongodbrepo /etc/yum.repos.d/mongo.repo
 ##-->Install MongoDB
