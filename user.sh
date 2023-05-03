@@ -4,6 +4,7 @@ echoInstall NodeJS
 yum install nodejs -y
 echo Setup SystemD User Service
 cp userservice.repo /etc/systemd/system/user.service
+cp mongodb.repos /etc/yum.repos.d/mongo.repo
 echo Add application User
 useradd roboshop
 echo Lets setup an app directory.
