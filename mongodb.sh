@@ -1,5 +1,5 @@
 ##->create mongodb repor
-cp mongodbrepo /etc/yum.repos.d/mongo.repo
+cp mongodb.repo /etc/yum.repos.d/mongo.repo
 ##-->Install MongoDB
 yum install mongodb-org -y
 
