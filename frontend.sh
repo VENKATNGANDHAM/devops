@@ -8,7 +8,7 @@ curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.z
 cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
 ##--->copy config/Create Nginx Reverse Proxy Configuration.
-echo creating nginx proxy configuration file
+echo creating nginx proxy configuration file.
 
 ##--->Start & Enable Nginx service
 systemctl enable nginx
