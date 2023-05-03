@@ -5,11 +5,11 @@ yum install nodejs -y
 ##Add application User
 useradd roboshop
 mkdir /app
-echo Download the application code to created app directory.
+echo Download the application code to created app directory....
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
 cd /app
 unzip /tmp/catalogue.zip
-echo Lets download the dependencies...
+echo Lets download the dependencies.
 cd /app
 npm install
 echo Setup SystemD Catalogue Service
