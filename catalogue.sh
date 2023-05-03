@@ -1,7 +1,10 @@
+
 echo Setup NodeJS repos. Vendor is providing a script to setup the repos.
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 echo Install NodeJS
 yum install nodejs -y
+cp catalogue.config /etc/systemd/system/catalogue.service
+ cp mongodb.repo /etc/yum.repos.d/mongo.repo
 ##Add application User
 useradd roboshop
 mkdir /app
@@ -13,7 +16,7 @@ echo Lets download the dependencies.
 cd /app
 npm install
 echo Setup SystemD Catalogue Service
-cp catalogue.config /etc/systemd/system/catalogue.service
+
 echo Load service
 systemctl daemon-reload
 echo Start the service.
@@ -22,7 +25,7 @@ systemctl restart catalogue
 
 ##We need to load the schema. To load schema we need to install mongodb client.
   #  #To have it installed we can setup MongoDB repo and install mongodb-client
-  cp mongodbrepo /etc/yum.repos.d/mongo.repo
+
 
 echo Install mongodb
 yum install mongodb-org-shell -y
